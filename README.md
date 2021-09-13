@@ -1,13 +1,19 @@
 # whichtree
+
+## What's included?
+
 Tree suggestion system from CAD blocks, using Lunchbox Neural Network components and Grasshopper. The image files contain a presentation of how the algorithm works, while the .gh files contain the actual algorithm.
 
-Also included is a Python Wikipedia scraping script that looks up Wikipedia pages for a large list of trees, and returns select properties (height, trunk diameter, location) into a CSV that is then used to train a Grasshopper Neural Network with Lunchbox.
+Also included is a Python Wikipedia scraping script that looks up Wikipedia pages for a large list of trees, and returns select properties (height, trunk diameter, location) into a CSV that is then used to train a Grasshopper Neural Network with Lunchbox. 
 
-There are 3 visual categories: Tree, Shrub, Palm
+## Description:
 
-From GlobalTreeSearch, I collected a list of trees in each country in Europe. This was juxtaposed with EU-forest, another database that contains occurrences of tree species in Europe.
+Landscape features such as trees are of special interest as non-standard representations. The features of these vector geometries, usually propagated in libraries over the internet and used in the form of CAD blocks, or extended geometries, can be interpreted as humans to understand the ‘green’ nature of a space, by certain visual cues. These 2d representations of trees can potentially provide information on the diameter of the tree crown, density of greenery, ‘bushiness’, or other features that communicate the atmosphere of the space to the reader of the plan. This model was built for the purpose of percieving input vector geometries, 2d representation of trees, and using user-input and implicit data to suggest a tree species to the user.
 
-Finally, trees by country were juxtaposed by proportion of large diameters to small diameters. Items of large diameters larger than a ratio of 0.6 were classified as trees, smaller than ratio of 0.3 were classified as shrubs, and 
+Tree species by country were obtained from GlobalTree-Search.com, for 15 countries, amounting to 480 distinct species.
 
-These were placed in visual categories according to this Wikipedia page:
-https://en.wikipedia.org/wiki/List_of_trees_and_shrubs_by_taxonomic_family
+## Scraping:
+
+In order to find the type of each tree species, datasets by EU-forest, and Eurasian Research were utilized. These yielded several diverse datapoints; however their collections were aimed at cataloguing trees within forested areas of several countries, and only 120 tree species were described in detail, with max/median height, diameter, etc.
+In order to fill the gaps, Wikipedia pages relating to the 480 species were scraped to find the heights of each tree, and filled in where the datasets were lacking. This completed the necessary tree height dataset.
+
