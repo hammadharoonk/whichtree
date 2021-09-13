@@ -1,5 +1,7 @@
 # whichtree
 
+![alt text](https://github.com/hammadharoonk/whichtree/blob/main/Output.jpg?raw=true)
+
 ## What's included?
 
 Tree suggestion system from CAD blocks, using Lunchbox Neural Network components and Grasshopper. The image files contain a presentation of how the algorithm works, while the .gh files contain the actual algorithm.
@@ -16,4 +18,6 @@ Tree species by country were obtained from GlobalTree-Search.com, for 15 countri
 
 In order to find the type of each tree species, datasets by EU-forest, and Eurasian Research were utilized. These yielded several diverse datapoints; however their collections were aimed at cataloguing trees within forested areas of several countries, and only 120 tree species were described in detail, with max/median height, diameter, etc.
 In order to fill the gaps, Wikipedia pages relating to the 480 species were scraped to find the heights of each tree, and filled in where the datasets were lacking. This completed the necessary tree height dataset.
+
+![alt text](https://github.com/hammadharoonk/whichtree/blob/main/Scraping.jpg?raw=true)
 
